@@ -38,13 +38,14 @@ class Parientes(Datos_personales):
         
     def presentacion_pariente(self):
         print(f"Mi nombre es {self.nombre} {self.apellido}, tengo {self.edad} anios, mi cédula de identidad es {self.cedula} y mi nacionalidad es {self.nacionalidad} y mi pariente es {self.pariente}.")
-        return super().presentacion()
+        
         
         
 mis_datos = Datos_personales()
+mis_datos_pariente = Parientes()
 
 while True:
-    opcion = input("Que opción desea tomar? \n1.ingresar Datos \n2. Mostrar Datos \n3. Presentación \n4. Salir \n.5 Volver al mení \n")
+    opcion = input("Que opción desea tomar? \n1.ingresar Datos \n2. Mostrar Datos \n3. Presentación \n4.Ingresar Pariente  \n5.Mostrar Datos Acutalizado \n6. Presentacion Actualizada \n7. Salir \n8. Volver al menú.\n")
     if opcion == "1":
         mis_datos.ingresar_datos()
     elif opcion == "2":
@@ -52,9 +53,15 @@ while True:
     elif opcion == "3":
         mis_datos.presentacion()
     elif opcion == "4":
+        mis_datos_pariente.ingresar_datos_pariente()
+    elif opcion == "5":
+        mis_datos_pariente.mostrar_datos_pariente()
+    elif opcion == "6":
+        mis_datos_pariente.presentacion_pariente()
+    elif opcion == "7":
         print("Saliendo del programa...")
         break
-    elif opcion == "5":
+    elif opcion == "8":
         continue
     else:
         print("Opción invalida.")
