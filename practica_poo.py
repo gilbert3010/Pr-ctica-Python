@@ -42,8 +42,20 @@ class Parientes(Datos_personales):
         
         
 mis_datos = Datos_personales()
-mis_datos_parientes = Parientes()
-mis_datos_parientes.ingresar_datos_pariente()
-mis_datos_parientes.mostrar_datos_pariente()
-mis_datos_parientes.presentacion_pariente()
+
+while True:
+    opcion = input("Que opción desea tomar? \n1.ingresar Datos \n2. Mostrar Datos \n3. Presentación \n4. Salir \n.5 Volver al mení \n")
+    if opcion == "1":
+        mis_datos.ingresar_datos()
+    elif opcion == "2":
+        mis_datos.mostrar_datos()
+    elif opcion == "3":
+        mis_datos.presentacion()
+    elif opcion == "4":
+        print("Saliendo del programa...")
+        break
+    elif opcion == "5":
+        continue
+    else:
+        print("Opción invalida.")
 
