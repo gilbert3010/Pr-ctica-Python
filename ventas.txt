@@ -1,1 +1,3 @@
-harina pan, 30, 1.5
+Nombre: cerela
+ Cantidad: 20
+ Precio: 1.0
