@@ -1,6 +1,7 @@
 class Venta:
     def __init__(self):
-        self.producto = []
+        with open("ventas.txt", "r") as ventas:
+            self.producto = ventas.readlines()
         self.nombre_producto = None
         self.cantidad = None
         self.precio = 0
@@ -18,30 +19,28 @@ class Venta:
             for linea in ventas:
                 print(linea.strip())
                 
-    """"def comprar_producto(self, cantidad):
-        with open("ventas.txt", "r") as ventas:
-            print("Elige el producto que desea comprar: ")
-            for i, self.nombre_producto in enumerate(ventas.readlines()):
-                print(f"{i+1}. {self.nombre_producto}")
+    def comprar_producto(self):
+        if self.producto and self.nombre_producto:
+            with open("ventas.txt", "r") as ventas:
+                lista_producto = ventas.readlines()
+            print(input("Que producto desea comprar?: "))
+            self.cantidad -= int(input("Ingrese la cantidad: "))
+            lista_producto.close()
+        else:
+            print("Producto no disponible.")
             
-                if cantidad > self.cantidad:
-                    print("Sobre límite de productos disponibles.")
-                elif cantidad <= self.cantidad:
-                    self.cantidad -= cantidad
-                    print(f"Compra realizada. Quedan {self.cantidad} de {self.nombre_producto}productos dispobibles.")
-                else:
-                    print("Cantidad no válida.")"""
-        
             
 venta = Venta()
 
 while True:
-    opcion = input("Menú de venta:\n1. Agregar Producto.\n2.Mostrar Productos.\n3. Salir.\nOpción...: ")
+    opcion = input("Menú de venta:\n1. Agregar Producto.\n2.Mostrar Productos.\n3. Comprar Producto.\n4.Salir. \nIngrese una opcion: ")
     if opcion == "1":
         venta.agregar_producto()
     elif opcion == "2":
         venta.mostrar_productos()
     elif opcion == "3":
+        venta.comprar_producto()
+    elif opcion == "4":
         print("Saliendo...")
         break
     else: print("Opción inválida.")
