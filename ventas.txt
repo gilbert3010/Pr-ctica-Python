@@ -1,3 +1,12 @@
-Nombre: cerela
- Cantidad: 20
- Precio: 1.0
+ID: 1
+ Nombre: azucar
+Cantidad: 29
+ Precio: 2.0
+ID: 2
+ Nombre: doritos
+ Cantidad: 30
+ Precio: 5.0
+ID: 3
+ Nombre: zucaritas
+ Cantidad: 30
+ Precio: 3.0
