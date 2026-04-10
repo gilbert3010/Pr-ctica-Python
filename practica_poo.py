@@ -1,6 +1,6 @@
 class Datos_personales:
     def __init__(self):
-        self.nombre = "Non"
+        self.nombre = "None"
         self.apellido = "None"
         self.edad = 0
         self.cedula = "None"
