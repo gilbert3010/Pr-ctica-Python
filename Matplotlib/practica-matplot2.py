@@ -24,4 +24,16 @@ ax.set_title('Evolución de Elon Mosk')
 ax.legend()
 ax.grid(True, alpha=0.3)
 
+ax.plot(finanzas['Bill Gate'], 
+        label='Bill Gate', 
+        lw=2, 
+        color='blue',
+        path_effects=[patheffects.SimpleLineShadow(), patheffects.Normal()])
+
+ax.set_xlabel('Índice')
+ax.set_ylabel('Valor')
+ax.set_title('Evolución de Bill Gate')
+ax.legend()
+ax.grid(True, alpha=0.3)
+
 plt.show()
