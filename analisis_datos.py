@@ -1,5 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+import openpyxl as pxl # Para trabajar con archivo excel.
 
 
 """Crea un sistema que permita analizar los datos de un archivo CSV.
