@@ -19,9 +19,12 @@ class AnalisisDatos:
     def cargar_datos(self):
         self.archivo = input("Ingrese el nombre del archivo CSV que desea analizar:")
         self.datos = pd.read_excel(self.archivo)
+        
+
             
+if __name__ == "__main__": # Punto de entrada del programa.
             
-datos = AnalisisDatos(archivo='', datos='')
-datos.cargar_datos()
+    datos = AnalisisDatos(archivo='', datos='')
+    datos.cargar_datos()
             
         
